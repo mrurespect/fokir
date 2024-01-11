@@ -1,0 +1,365 @@
+:root{
+    --main-color: #F1F1F1;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.text-main{
+    background-color: var(--main-color);
+}
+.header{
+    background-image: url("../img/slider/slider-01.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+.layerx{
+    /*the layer class has one purpose
+     setting  the rgba*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0,0,0,0.6);
+}
+.header-content h1{
+    color: #FF305B;
+    font-size: 70px;
+    font-weight: bold;
+}
+.header-content span,.header-content h3{
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+}
+.onav-bar{
+    color: white;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 30px;
+    margin: 10px 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+li a:hover{
+    color: red;
+}
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    width: 50%;
+}
+
+.typing::after{
+    content: " |";
+    animation: typing 3s infinite ;
+    animation-direction: alternate;
+}
+@keyframes typing {
+    0%{
+        content: " |";
+    }
+    3%{
+        content: "D|";
+    }
+    6%{
+        content: "De|";
+    }
+    9%{
+        content: "Des|";
+    }
+    12%{
+        content: "Desi|";
+    }
+    15%{
+        content: "Desig|";
+    }
+    18%{
+        content: "Design|";
+    }
+    21%{
+        content: "Designe|";
+    }
+    24%{
+        content: "Designer|";
+    }
+    27%{
+        content: " |";
+    }
+    30%{
+        content: "D|";
+    }
+    33%{
+        content: "De|";
+    }
+    36%{
+        content: "Dev|";
+    }
+    39%{
+        content: "Devl|";
+    }
+    43%{
+        content: "Devlo|";
+    }
+    46%{
+        content: "Devlop|";
+    }
+    49%{
+        content: "Devlope|";
+    }
+    53%{
+        content: "Devloper|";
+    }
+    /*
+    100% divided by number of chars
+     */
+}
+.profile{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.portrait{
+    width: 35%;
+    border: black 10px solid ;
+    border-radius: 5px;
+    position: relative;
+}
+.portrait img{
+    width: 100%;
+    position: relative;
+    left: 20px;
+    top: 20px ;
+}
+.about{
+    width: 60%;
+    padding: 50px 40px;
+    font-size: 19px;
+    align-self: baseline;
+}
+.about h3:before{
+    content: "| ";
+    color: red;
+
+}
+.about p,.about table{
+    padding: 20px 0;
+}
+.about table{
+    padding: 15px ;
+}
+.about table tr td{
+    padding: 10px;
+}
+.about p{
+    border-bottom: black dashed 1px;
+}
+.btn{
+    padding: 10px 20px;
+    font-size: 17px;
+    margin: 0 15px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: #EC2403;
+}
+.transition{
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    width: 100%;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0 ;
+}
+.portrait:hover .transition{
+    animation: transi 2s ;
+}
+@keyframes transi {
+    0%{
+        top: 103%;
+        height: 0;
+        opacity: 0;
+        color: rgba(19,26,92,0);
+    }
+    100%{
+        top: 20px;
+        opacity: 1;
+        height: 100%;
+        color: rgba(19,26,92,1);
+    }
+}
+.title{
+    position: relative;
+    font-size: 3rem;
+}
+.title::after{
+    content: '';
+    width: 8%;
+    height: 10px;
+    border-top: 1px solid #FF305B;
+    border-bottom: 1px solid #FF305B;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.title::before{
+    content: '';
+    width: 15%;
+    height: 1px;
+    background-color: #FF305B;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.services-item p{
+    font-size: 18px;
+    color: #7E7E7E;
+    padding: 10px 0;
+}
+.services-item h5{
+    font-size: 24px ;
+    font-weight:600 ;
+}
+.services-item .fa{
+    color: #FF305B;
+    padding: 20px 0;
+}
+.links a{
+    color: black;
+    padding: 10px ;
+    text-decoration: none;
+}
+.links a:hover{
+    color: deeppink;
+}
+.item{
+    position: relative;
+    width: 100%;
+}
+.layer{
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: opacity 1s;
+}
+.item .layer:hover{
+    opacity: 1;
+}
+.statistics h3{
+    font-size: 24px;
+    font-weight: 800;
+}
+.statistics p{
+    color: #949494;
+    font-size: 16px;
+}
+.feedbacks p {
+    font-size: 16px;
+    font-style: italic;
+    padding: 10px;
+    color: #7E7E7E;
+}
+.feedbacks i{
+    color: #7E7E7E;
+}
+.feedbacks img{
+    border-radius: 50% ;
+}
+.icon{
+    margin-left: 10px;
+    letter-spacing: 0 ;
+}
+.icon i{
+    width: 20px;
+    height: 20px;
+    text-align: end;
+    color: gold;
+}
+#blog a{
+    color: black;
+}
+#blog a:hover{
+    color: orangered;
+}
+#contact button {
+    border: none;
+    color: white;
+    background-color: #ff3030;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+#contact button:hover{
+    background-color: darkred;
+}
+.logos i{
+
+    color: white;
+    padding: 5px ;
+    margin: 10px ;
+}
+.logos a:hover i{
+    color: red;
+}
+footer {
+    background-color: #333333;
+    padding: 50px 0;
+}
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+@media  screen and (max-width: 992px) {
+    ul{
+        width: 80%;
+    }
+    .profile{
+        display: block;
+    }
+    .about{
+        width: 100%;
+        text-align: center;
+    }
+    .portrait{
+        margin: 20px auto;
+
+    }
+}
+@media  screen and (max-width: 768px) {
+    .nav-bar{
+        flex-direction: column;
+    }
+    ul{
+        flex-direction: column;
+    }
+    li{
+        padding: 5px 0;
+    }
+}
